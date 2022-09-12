@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+.mat-form-field {
+    margin-top: 16px;
+  }
+
+  .box {
+    border: 1px solid darkblue;
+    width: 800px;
+    height: 650px;
+    margin: 80px auto;
+    padding: 10%;
+    
+    justify-content: center;
+    
+    display: flex;
+
+
+  }
+     

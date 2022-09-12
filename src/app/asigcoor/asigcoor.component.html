@@ -1,0 +1,91 @@
+<div class="box">
+<mat-stepper #stepper>
+    <mat-step [stepControl]="firstFormGroup" errorMessage="Proceso Incompleto.">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Paso 1</ng-template>
+
+        <div class="col-12">
+       
+         
+          
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4">
+        
+      </div>
+
+      <div class="col-12">
+       
+          <ng-template matStepLabel>Ingrese su Nmr. Cedula</ng-template>
+         
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input type="email" class="form-control" id="inputEmail4">
+      
+      </div>
+
+        <div class="col-12">
+          <ng-template matStepLabel>Ingrese su Nmr. Cedula</ng-template>
+         
+          <label for="inputAddress" class="form-label">Direccion</label>
+          <input type="email" class="form-control" id="inputEmail4">
+       
+      </div>
+
+      <div class="col-12">
+       
+          <ng-template matStepLabel>Ingrese su Nmr. Cedula</ng-template>
+          
+          <label for="inputCity" class="form-label">City</label>
+          <input type="email" class="form-control" id="inputEmail4">
+    
+      </div>
+
+      <div class="col-12">
+          <ng-template matStepLabel>Ingrese su Nmr. Cedula</ng-template>
+         
+
+          <label for="inputState" class="form-label">State</label>
+          <select id="inputState" class="form-select">
+          <option selected>Choose...</option>
+          <option>...</option>
+          </select>
+       
+      </div>
+     
+      
+
+        <div>
+          <p>Go to a different step to see the error state</p>
+          <button style="background-color: #3E77F5; color: white;" mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" errorMessage="Proceso Incompleto.">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Paso 2</ng-template>
+        <div>
+          <form>
+            <select name="docentes">
+              <option>Seleccione un Docente</option>
+              <option>Ing. Carmen Tacuri</option>
+            </select>
+          </form>
+        </div>
+        <div>
+          <p>Go to a different step to see the error state</p>
+          <button  mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Finalizar</ng-template>
+      <p>Terminar</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+
+
+</div>
